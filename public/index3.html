@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styleArt.css">
+    <title>Document</title>
+    <script>
+        console.log('about to fetch text2');
+      catchPoem()
+        .then(poem => {
+          document.getElementById('text2').innerText = poem;
+          console.log('yay');
+        })
+        .catch(error => {
+          console.log('error!');
+          console.error(error);
+        });
+
+      async function catchPoem() {
+        const response = await fetch('newstext/nutritionfake.txt');
+        return await response.text();
+      }
+    </script>
+</head>
+<body>
+    <header>
+        <!--header top-->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="column-30">
+                    <div class="logo">
+                        <a href="#"><img src="image/fakenews.png" alt="news"class="responsive-image"></a>
+                    </div>
+                </div>
+                    <div class="column-70">
+                        <a href="#"><img src="image/bannerad.jpg" alt="advertisement" class="responsive-image"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--navaigation-->
+        <nav>
+            <div class="container">
+         <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">National</a></li>
+             <li><a href="#">International</a></li>
+             <li><a href="#">Entertainment</a></li>
+             <li><a href="#">Sports</a></li>
+             <li><a href="#">Technology</a></li>
+         </ul>
+     </div>
+        </nav>
+        <!--breaking news-->
+        <div class="breaking-news">
+         <div class="container">
+             <div class="row">
+                 <div class="column-20">
+                     <div class="update-left">UPDATES</div>
+                 </div>
+                 <div class="column-80">
+                     <div class="update-right">
+                     <marquee>Recent Updates from FakeNews channel...</marquee>
+                 </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </header>
+  <!--section-->
+    <div class="outer">
+        <div class="h1container">
+        <h1>Nutrition could help your immune system fight off the coronavirus</h1>
+    <article>
+    <img src="image/news/food.jpeg" alt="trump">
+    <p id="text2"></p>
+    </article>
+    </div>
+    <footer>
+        <div class="container ptb-25">
+            <div class="row">
+                <div class="column-30">
+                    <!--logo and social-->
+                    <div class="footer-logo">
+                        <img src="image/fakenews.png" alt="" class="responsive-image">  
+                    </div>
+                    <ul class="footer-social">
+                        <li><a href="#"><img src="image/social/facebook.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="image/social/youtube.png" alt="youtube"></a></li>
+                        <li><a href="#"><img src="image/social/twitter.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="image/social/instagram.png" alt="instagram"></a></li>
+                    </ul>
+                    <address>
+                        NEW YORK, USA
+                    </address>
+                </div>
+                <div class="column-20">
+                <!--category-->
+                <div class="sec-title">Category</div>
+                    <ul class="footer-cat">
+                        <li><a href="#">National</a></li>
+                        <li><a href="#">International</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Technology</a></li>
+                    </ul>
+            </div>
+                <div class="column-20">
+                <!--recent news-->
+                <div class="sec-title">Recent News</div>
+                <ul class="footer-cat">
+                        <li><a href="#">National Recent News for Fake News</a></li>
+                        <li><a href="index4.html">International Recent News for Fake News</a></li>
+                        <li><a href="#">Entertainment Recent News for Fake News</a></li>
+                        <li><a href="#">Sports Recent News for Fake News</a></li>
+                        <li><a href="#">Technology Recent News for Fake News</a></li>
+                    </ul>
+                </div>
+                <div class="column-30">
+                    <div class="sec-title">Photo Gallery</div>
+                    <ul class="footer-gallery">
+                        <ul class="footer-gallery">
+                            <li class="column-33"><img src="image/news/trumpkim.png" alt=""></li>
+                            <li class="column-33"><img src="image/news/river.jpeg" alt=""></li>
+                            <li class="column-33"><img src="image/news/famousactor.jpeg" alt=""></li>
+                            <li class="column-33"><img src="image/news/artifect.jpeg" alt=""></li>
+                            <li class="column-33"><img src="image/news/church.jpeg" alt=""></li>
+                            <li class="column-33"><img src="image/news/restaurant.jpeg" alt=""></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">Fake News created by Runway ML </a>Nothing in here is real &copy; 2020
+
+                <!-- <div class="inputbox"> -->
+                    <form>
+                    <label for="vote"></label>
+                    <input id="vote" value="10" /><br>
+                    <button id="submit" formaction="all.html">submit vote</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
